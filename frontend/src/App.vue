@@ -12,6 +12,12 @@ import ThemeSong from '@/components/ThemeSong.vue'
 export default {
   name: 'App',
   components: { ThemeSong },
+  metaInfo: {
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    ]
+  },
   data: () => ({
     ismobile: false,
     inLineApp: false

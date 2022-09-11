@@ -25,11 +25,14 @@
         <img class="bkg-logo-img" :src="logoUrl" />
         <VTextMarquee ref="marquee" :speed="70">{{ marqueeStr }}</VTextMarquee>
         <img class="froggyImage" :src="froggyImageUrl" />
+
+        <!--
         <img
           class="reportArrow"
           @click="$router.push({ name: 'about', hash: '#report' })"
           :src="reportArrowImg"
         />
+        --> 
       </el-row>
     </transition>
     <BottomGameDialog
@@ -79,9 +82,6 @@ export default {
         {
           showTime: [12, 21],
           textContent: [
-            "哈囉！鋤禾日當午，汗滴禾下土，為選民服務，是我的任務。我是台北市議員邱威傑，也就是你們認識的呱吉。",
-            "以前常有人拜託我一些雞毛蒜皮的小事，我都會說「干我什麼事」？",
-            "但當選議員之後，任何的我過去認為的小事也許是市民們心中的大事。",
             "直接說吧，我能幫上什麼忙？"
           ],
           textContent_mobile: [
@@ -178,6 +178,8 @@ export default {
       }
     },
     froggyImageUrl: function() {
+
+      return "http://52.192.19.39/hsiang.png";
       if (this.$route.params.success === true) {
         return (
           this.froggyImageStorageUrl +
@@ -328,7 +330,7 @@ export default {
     max-height: 60vh
   .froggyImage
     width: 100%
-    max-width: 500px
+    max-width: 300px
     transform: translateY(1000px)
     animation: flyin 1.5s forwards
     @media screen and (max-width: $break_small)

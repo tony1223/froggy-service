@@ -14,7 +14,7 @@ python manage.py loaddata region type site sendgrid-template.yaml marquee.yaml
 python manage.py loaddata cases.test.yaml arranges.test.yaml
 
 # Create a dev user
-python manage.py init_superuser test@test.test 123456
+python manage.py init_superuser tonyq@tonyq.org playplay
 
 # Store insights to cache
 python manage.py cache_insights

@@ -27,7 +27,7 @@
           @click="toggleParentAnimation('cases')"
           :disabled="buttonDisabled"
         >
-          <a>呱吉做什麼</a>
+          <a> {{hostName}}做什麼</a>
           <div class="arrow-icon">
             <i class="el-icon-caret-right" :class="{showArrow: showArrow[1]}"></i>
           </div>
@@ -84,7 +84,8 @@ export default {
       showArrow: [false, false, false],
       showHomeArrow: false,
       lastLine: false,
-      buttonDisabled: false
+      buttonDisabled: false,
+      hostName:"香君"
     };
   },
   methods: {

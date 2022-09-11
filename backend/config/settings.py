@@ -17,6 +17,9 @@ ROOT_DIR = environ.Path(__file__) - 2
 # Load operating system environment variables and then prepare to use them
 env = environ.Env()
 
+env.read_env(str(ROOT_DIR.path(".env")))
+
+
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
